@@ -67,19 +67,11 @@ jobs:
         shell: pwsh
         run: |
           "::set-output name=repository::$($env:GITHUB_REPOSITORY.ToLowerInvariant())"
-      - name: Build amd64 image and export to Docker for testing
+      - name: Build arm64 Docker image, tag and push to registries
         uses: docker/build-push-action@v5
         with:
           context: .
-          load: true
-          tags: ghcr.io/${{ steps.lower-repo.outputs.repository }}:${{ steps.generate_temporary_tag_name.outputs.test_tag }}
-          build-args: |
-            RELEASETAG=${{ github.event.inputs.tags }}
-      - name: Build multi-arch Docker image, tag and push to registries
-        uses: docker/build-push-action@v5
-        with:
-          context: .
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/arm64
           push: true
           tags: ${{ steps.lower-repo.outputs.repository }}:${{ github.event.inputs.tags }}, quay.io/${{ steps.lower-repo.outputs.repository }}:${{ github.event.inputs.tags }}, ghcr.io/${{ steps.lower-repo.outputs.repository }}:${{ github.event.inputs.tags }}
           build-args: |
