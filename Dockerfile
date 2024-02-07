@@ -9,9 +9,9 @@ ENV NODE_ENV production
 
 RUN apt-get update && apt-get install wget unzip -y
 
-RUN wget -q -O - 'https://playwright.azureedge.net/builds/chromium/1088/chromium-linux-arm64.zip' && \
-  unzip chromium-linux-arm64.zip && \
-  rm -f ./chromium-linux-arm64.zip
+RUN wget -q --show-progress 'https://playwright.azureedge.net/builds/chromium/1088/chromium-linux-arm64.zip' -O chromium-linux-arm64.zip && \
+    unzip chromium-linux-arm64.zip && \
+    rm -f ./chromium-linux-arm64.zip
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 ENV CHROME_PATH=/chrome-linux/chrome
