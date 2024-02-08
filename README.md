@@ -1,8 +1,8 @@
 # Puppeteer Docker for ARM64
 
-![Docker Pulls](https://img.shields.io/docker/pulls/canardconfit/is-academia-bot)
-![GitHub Release](https://img.shields.io/github/v/release/CanardConfit/is-academia-bot)
-![GitHub Repo stars](https://img.shields.io/github/stars/CanardConfit/is-academia-bot)
+![Docker Pulls](https://img.shields.io/docker/pulls/canardconfit/puppeteer-docker)
+![GitHub Release](https://img.shields.io/github/v/release/CanardConfit/puppeteer-docker)
+![GitHub Repo stars](https://img.shields.io/github/stars/CanardConfit/puppeteer-docker)
 
 ## Introduction
 This project provides a Docker image tailored for running Puppeteer on arm64 architecture, facilitating web automation tasks such as web scraping, automated testing of web pages, and screenshot capture of web pages on arm64 platforms.
