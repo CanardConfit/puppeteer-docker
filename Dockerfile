@@ -5,9 +5,9 @@
 
 FROM node:20-slim
 
-LABEL org.opencontainers.image.authors = "CanardConfit"
-LABEL org.opencontainers.image.source = "https://github.com/CanardConfit/puppeteer-docker"
-LABEL org.opencontainers.image.description = "A simple docker image to run Puppeteer under arm64 architecture."
+LABEL org.opencontainers.image.authors="CanardConfit"
+LABEL org.opencontainers.image.source="https://github.com/CanardConfit/puppeteer-docker"
+LABEL org.opencontainers.image.description="A simple docker image to run Puppeteer under arm64 architecture."
 
 RUN apt-get update \
     && apt-get install --no-install-recommends -y wget unzip fonts-ipafont-gothic fonts-wqy-zenhei fonts-thai-tlwg fonts-khmeros \
