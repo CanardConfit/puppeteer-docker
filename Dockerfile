@@ -1,8 +1,3 @@
-# chromium arm64 version solution: https://github.com/puppeteer/puppeteer/issues/7740#issuecomment-1833202428
-# puppeteer version: ~21.5.2
-# chromium version: 119.0.6045.105 (https://pptr.dev/chromium-support)
-# playwright arm64 chromium build for chromium version 119.0.6045.105: r1088 (https://github.com/microsoft/playwright/commit/38115d121bd330b596a1fde2c81bbc2930783f86)
-
 FROM node:20-slim
 
 LABEL org.opencontainers.image.authors="CanardConfit"
@@ -21,7 +16,7 @@ RUN apt-get install --no-install-recommends --yes ca-certificates fonts-liberati
     libnspr4 libnss3 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 \
     libxfixes3 libxi6 libxrandr2 libxrender1 libxshmfence1 libxss1 libxtst6 lsb-release wget xdg-utils
 
-RUN wget -q --show-progress 'https://playwright.azureedge.net/builds/chromium/1088/chromium-linux-arm64.zip' -O chromium-linux-arm64.zip
+RUN wget -q --show-progress 'https://playwright.azureedge.net/builds/chromium/1151/chromium-linux-arm64.zip' -O chromium-linux-arm64.zip
 RUN unzip chromium-linux-arm64.zip
 RUN rm -f ./chromium-linux-arm64.zip
 
